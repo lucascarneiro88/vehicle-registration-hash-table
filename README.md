@@ -27,7 +27,7 @@ class States:
         self.state_name = state_name 
         self.state_code = state_code  
         self.current = None           
-        ```
+```
 
 
 - Esta classe representa um estado , com três atributos:
