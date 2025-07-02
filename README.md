@@ -92,3 +92,23 @@ def state_code_hash_calculate_function(self, state_code):
 - "DF" Retorna 7 ( regra especifica)
 - **Outros estados**: Soma os valores numéricos dos dois primeiros caracteres da sigla e aplica o módulo 10 (% 10). Isso garante que o resultado seja sempre uma posição válida na tabela.
 
+## Exigência de código 4 de 7
+
+```python
+  def insert_state(self, state_name, state_code):
+        index = self.state_code_hash_calculate_function(state_code)
+        new_state = State(state_name, state_code)
+        if not self.table[index]:
+            self.table[index] = new_state
+        else:
+            new_state.next = self.table[index]
+            self.table[index] = new_state
+
+```
+
+- Esta função é responsável por adicionar um novo estado à sua VehicleRegistrationHashTable. Ela lida tanto com a inserção simples quanto com o caso de colisão, usando a técnica de endereçamento em cadeia (listas encadeadas).
+- Calcula o índice de onde o estado deve ir usando a função hash.
+- Cria um novo objeto State.
+- Verifica a posição:
+   * Se a posição na tabela estiver vazia, o novo estado é inserido diretamente lá.
+   * Se a posição já tiver um estado (colisão), o novo estado é adicionado no início da lista encadeada daquela posição, tornando-se o primeiro elemento.
