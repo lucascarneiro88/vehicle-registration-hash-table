@@ -112,3 +112,24 @@ def state_code_hash_calculate_function(self, state_code):
 - Verifica a posição:
    * Se a posição na tabela estiver vazia, o novo estado é inserido diretamente lá.
    * Se a posição já tiver um estado (colisão), o novo estado é adicionado no início da lista encadeada daquela posição, tornando-se o primeiro elemento.
+ 
+## Exigência de Código 5 de 7
+
+```python
+    def print_table(self):
+        for i in range(10):
+            print(f'Index {i}: ', end='')
+            current = self.table[i]
+            while current:
+                print(f'{current.state_code} -> ', end='')
+                current = current.next
+            print('None')
+```
+
+- A função print_table mostra o conteúdo da sua tabela hash.
+Ela percorre as 10 posições da tabela:
+ * Para cada posição, imprime o índice.
+ * Em seguida, percorre e imprime as siglas dos estados encadeados nessa posição, usando -> para indicar a ligação.
+ * Termina cada linha com None, mostrando o fim da lista encadeada.
+
+
