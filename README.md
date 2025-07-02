@@ -133,3 +133,41 @@ Ela percorre as 10 posições da tabela:
  * Termina cada linha com None, mostrando o fim da lista encadeada.
 
 
+## Exigência de código 6 de 7
+
+```python
+def main():
+    hash_table = VehicleRegistrationHashTable()
+
+    # Exigência de saída de console 1 de 3
+    print("\n--- Tabela Hash antes de inserir qualquer estado ---")
+    hash_table.print_table()
+
+    # Lista completa dos 26 estados + DF
+    brazilian_states = [
+        ('Acre', 'AC'), ('Alagoas', 'AL'), ('Amapá', 'AP'), ('Amazonas', 'AM'),
+        ('Bahia', 'BA'), ('Ceará', 'CE'), ('Distrito Federal', 'DF'),
+        ('Espírito Santo', 'ES'), ('Goiás', 'GO'), ('Maranhão', 'MA'),
+        ('Mato Grosso', 'MT'), ('Mato Grosso do Sul', 'MS'), ('Minas Gerais', 'MG'),
+        ('Pará', 'PA'), ('Paraíba', 'PB'), ('Paraná', 'PR'), ('Pernambuco', 'PE'),
+        ('Piauí', 'PI'), ('Rio de Janeiro', 'RJ'), ('Rio Grande do Norte', 'RN'),
+        ('Rio Grande do Sul', 'RS'), ('Rondônia', 'RO'), ('Roraima', 'RR'),
+        ('Santa Catarina', 'SC'), ('São Paulo', 'SP'), ('Sergipe', 'SE'),
+        ('Tocantins', 'TO')
+    ]
+
+    # Inserção dos estados
+    for state_name_brazilian, state_code_brazilian in brazilian_states:
+        hash_table.insert_state(state_name_brazilian, state_code_brazilian)
+```
+
+
+- Configuração Inicial e População de Dados
+- Esta parte do código é a função principal (main) que demonstra o uso da VehicleRegistrationHashTable.
+- Ela realiza as seguintes ações:
+
+   * Inicializa a tabela hash vazia.
+   * Imprime o estado inicial da tabela (vazia).
+   * Define uma lista com todos os estados brasileiros e o Distrito Federal.
+   * Insere cada um desses estados na tabela hash, utilizando a lógica de inserção já implementada.
+
