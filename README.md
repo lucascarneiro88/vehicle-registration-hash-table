@@ -76,3 +76,19 @@ ex:
 ### Em resumo:
 
 - Está criando a base da tabela hash com 10 "gavetas", são onde os estados serão inseridos, podendo formar listas ligadas em caso de colisão.
+
+
+## Exigência de código 3 de 7
+
+```python
+def state_code_hash_calculate_function(self, state_code):
+        if state_code == 'DF':
+            return 7
+        else:
+            return (ord(state_code[0]) + ord(state_code[1])) % 10
+```
+
+- Esta função é responsável por converter a sigla denim estado em um índice numérico (de 0 a 9) na tabela hash.
+- "DF" Retorna 7 ( regra especifica)
+- **Outros estados**: Soma os valores numéricos dos dois primeiros caracteres da sigla e aplica o módulo 10 (% 10). Isso garante que o resultado seja sempre uma posição válida na tabela.
+
