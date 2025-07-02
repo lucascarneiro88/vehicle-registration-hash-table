@@ -171,3 +171,20 @@ def main():
    * Define uma lista com todos os estados brasileiros e o Distrito Federal.
    * Insere cada um desses estados na tabela hash, utilizando a lógica de inserção já implementada.
 
+
+## Exigência de código 7 de 7
+
+```python
+fictitious_state_name = "Lucas Carneiro"
+    fictitious_state_code = "LC"
+    hash_table.insert_state(fictitious_state_name, fictitious_state_code)
+
+
+```
+- Inserção de Estado de Teste
+- Essa parte do código, dentro da função main, insere um estado fictício ("Lucas Carneiro", "LC") na tabela hash.
+- Serve para:
+    * Testar a função de inserção com um novo tipo de dado.
+    * Demonstrar como a tabela lida com entradas adicionais fora da lista de estados brasileiros.
+
+
