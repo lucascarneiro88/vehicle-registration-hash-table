@@ -59,3 +59,20 @@ ex:
 
 ### Em Resumo:
 - self.proximo = None, serve para inicializar a ligação vazia, e só depois ela é usada para apontar para outro "estado", caso haja colisões na tabela hash.
+
+
+## Exigência de código 2 de 7
+
+```python
+   class VehicleRegistrationHashTable:
+    def __init__(self):
+        self.table = [None] * 10
+```
+
+- Essa classe representa a tabela Hash com um atributo.
+- **Tabela**: Um vetor de 10 posições, onde cada posição é uma lista encadeada de estados.
+- Inicialmente todas posições são **None**
+
+### Em resumo:
+
+- Está criando a base da tabela hash com 10 "gavetas", são onde os estados serão inseridos, podendo formar listas ligadas em caso de colisão.
